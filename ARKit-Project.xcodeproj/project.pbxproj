@@ -14,6 +14,7 @@
 		BFC426F826327BC4006D766E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFC426F726327BC4006D766E /* Assets.xcassets */; };
 		BFC426FB26327BC4006D766E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC426F926327BC4006D766E /* LaunchScreen.storyboard */; };
 		BFC4270C26327D28006D766E /* AEShowToRGBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4270B26327D28006D766E /* AEShowToRGBController.swift */; };
+		BFC4271026328F03006D766E /* AECapturedTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4270F26328F03006D766E /* AECapturedTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BFC426FA26327BC4006D766E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFC426FC26327BC4006D766E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC4270B26327D28006D766E /* AEShowToRGBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEShowToRGBController.swift; sourceTree = "<group>"; };
+		BFC4270F26328F03006D766E /* AECapturedTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECapturedTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC4270B26327D28006D766E /* AEShowToRGBController.swift */,
+				BFC4270F26328F03006D766E /* AECapturedTools.swift */,
 			);
 			path = YUAToRGB;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC426F326327BC2006D766E /* ViewController.swift in Sources */,
+				BFC4271026328F03006D766E /* AECapturedTools.swift in Sources */,
 				BFC426EF26327BC2006D766E /* AppDelegate.swift in Sources */,
 				BFC426F126327BC2006D766E /* SceneDelegate.swift in Sources */,
 				BFC4270C26327D28006D766E /* AEShowToRGBController.swift in Sources */,

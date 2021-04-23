@@ -2,7 +2,7 @@
 //  AEShowToRGBController.swift
 //  ARKit-Project
 //
-//  Created by GW-Mac-Pro on 2021/4/23.
+//  https://github.com/Allen0828/ARKit-Project
 //
 
 import UIKit
@@ -12,6 +12,7 @@ class AEShowToRGBController: UIViewController {
 
     var session: ARSession!
     
+    private var testImg: UIImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +24,13 @@ class AEShowToRGBController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        let config = ARImageTrackingConfiguration()
+        session.run(config, options: .resetTracking)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        
+        session.pause()
     }
 
 }
@@ -37,6 +38,16 @@ class AEShowToRGBController: UIViewController {
 extension AEShowToRGBController: ARSessionDelegate {
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        let originalType = CVPixelBufferGetPixelFormatType(frame.capturedImage)
+        debugPrint(AECapturedTools.strType(from: originalType))
+        
+        if let ref = try? AECapturedTools(frame: frame), let rgb = ref.rgbPixel {
+            let type = CVPixelBufferGetPixelFormatType(rgb)
+            debugPrint(AECapturedTools.strType(from: type))
+        } else {
+            debugPrint("error")
+        }
+        
         
     }
     

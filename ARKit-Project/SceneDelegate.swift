@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  ARKit-Project
 //
-//  Created by GW-Mac-Pro on 2021/4/23.
+//  https://github.com/Allen0828/ARKit-Project
 //
 
 import UIKit
