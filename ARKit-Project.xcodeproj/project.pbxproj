@@ -15,6 +15,7 @@
 		BFC426FB26327BC4006D766E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC426F926327BC4006D766E /* LaunchScreen.storyboard */; };
 		BFC4270C26327D28006D766E /* AEShowToRGBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4270B26327D28006D766E /* AEShowToRGBController.swift */; };
 		BFC4271026328F03006D766E /* AECapturedTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4270F26328F03006D766E /* AECapturedTools.swift */; };
+		BFC427152632972B006D766E /* AECapturedTools_OC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC427142632972B006D766E /* AECapturedTools_OC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		BFC426FC26327BC4006D766E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC4270B26327D28006D766E /* AEShowToRGBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEShowToRGBController.swift; sourceTree = "<group>"; };
 		BFC4270F26328F03006D766E /* AECapturedTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AECapturedTools.swift; sourceTree = "<group>"; };
+		BFC427122632972A006D766E /* ARKit-Project-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARKit-Project-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFC427132632972B006D766E /* AECapturedTools_OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AECapturedTools_OC.h; sourceTree = "<group>"; };
+		BFC427142632972B006D766E /* AECapturedTools_OC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AECapturedTools_OC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,9 @@
 			children = (
 				BFC4270B26327D28006D766E /* AEShowToRGBController.swift */,
 				BFC4270F26328F03006D766E /* AECapturedTools.swift */,
+				BFC427132632972B006D766E /* AECapturedTools_OC.h */,
+				BFC427142632972B006D766E /* AECapturedTools_OC.m */,
+				BFC427122632972A006D766E /* ARKit-Project-Bridging-Header.h */,
 			);
 			path = YUAToRGB;
 			sourceTree = "<group>";
@@ -112,6 +119,7 @@
 				TargetAttributes = {
 					BFC426EA26327BC2006D766E = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -152,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFC426F326327BC2006D766E /* ViewController.swift in Sources */,
+				BFC427152632972B006D766E /* AECapturedTools_OC.m in Sources */,
 				BFC4271026328F03006D766E /* AECapturedTools.swift in Sources */,
 				BFC426EF26327BC2006D766E /* AppDelegate.swift in Sources */,
 				BFC426F126327BC2006D766E /* SceneDelegate.swift in Sources */,
@@ -302,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5M8CJ9NDR;
 				INFOPLIST_FILE = "ARKit-Project/Info.plist";
@@ -311,6 +321,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.allen.ARKit-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARKit-Project/YUAToRGB/ARKit-Project-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5M8CJ9NDR;
 				INFOPLIST_FILE = "ARKit-Project/Info.plist";
@@ -330,6 +343,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.allen.ARKit-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARKit-Project/YUAToRGB/ARKit-Project-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

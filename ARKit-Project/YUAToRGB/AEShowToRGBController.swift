@@ -41,13 +41,27 @@ extension AEShowToRGBController: ARSessionDelegate {
         let originalType = CVPixelBufferGetPixelFormatType(frame.capturedImage)
         debugPrint(AECapturedTools.strType(from: originalType))
         
-        if let ref = try? AECapturedTools(frame: frame), let rgb = ref.rgbPixel {
-            let type = CVPixelBufferGetPixelFormatType(rgb)
+        // Swift
+//        if let tools = try? AECapturedTools(frame: frame), let ref = tools.rgbPixel {
+//            let type = CVPixelBufferGetPixelFormatType(ref)
+//            debugPrint(AECapturedTools.strType(from: type))
+//        } else {
+//            debugPrint("error")
+//        }
+        // Swift end
+        
+        
+        // OC
+        let tools = AECapturedTools_OC(frame: frame)
+        if let ref = tools?.rgbPixel {
+            let type = CVPixelBufferGetPixelFormatType(ref)
             debugPrint(AECapturedTools.strType(from: type))
         } else {
             debugPrint("error")
         }
-        
+        // if use code in the .mm file,  you need call deinit function
+        // tools?.deinit()
+        // OC end
         
     }
     
