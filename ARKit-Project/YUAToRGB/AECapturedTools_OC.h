@@ -14,7 +14,7 @@
 
 @property(nonatomic, assign) CVPixelBufferRef rgbPixel;
 
-// 如果使用单例 反而会让内存和cpu占用率更高 已经进行测试
+// 如果使用单例 反而会让内存和cpu占用率更高 已经进行测试 如果没有特殊的需求 我推荐使用swift版本
 // If you use a single example, Memory and CPU will be overloaded
 - (instancetype)initWithFrame:(ARFrame*)frame;
 - (void)deinit;

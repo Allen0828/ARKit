@@ -76,16 +76,14 @@
 - (void)dealloc {
 //    [super dealloc];  // MRC open this
     NSLog(@"释放");
-    if (aRgbBuffer) {
-        NSLog(@"aRgbBuffer!=nil");
-        free(aRgbBuffer);
-        aRgbBuffer = NULL;
-    }
+    [self deinit];
 }
 
 - (void)deinit {
-    free(aRgbBuffer);
-    aRgbBuffer = NULL;
+    if (aRgbBuffer != NULL) {
+        free(aRgbBuffer);
+        aRgbBuffer = NULL;
+    }
 }
 
 @end
