@@ -9,6 +9,8 @@ import UIKit
 import Accelerate
 import ARKit
 
+// add objc 是为了 能让OC直接调用 如果不需要可以去掉
+// Add objc is designed to allow OC to call it directly. If it is not needed, it can be removed
 @objc class AECapturedTools: NSObject {
     
     @objc class func strType(from os: OSType) -> String {
