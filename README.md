@@ -1,4 +1,4 @@
-# YUA to RGB
+# YUV to RGB
 
 博客地址: https://blog.csdn.net/weixin_40085372/article/details/116007550
 
@@ -7,7 +7,7 @@ If you use arkit and try to get the camera frame, you will find that its type is
 
 But sometimes, we need `kCVPixelFormatType_32BGRA`.
 
-So we use tools to convert yua to RGB.
+So we use tools to convert yua to ARGB.
 
 in Swift 
 ```swift
