@@ -15,6 +15,8 @@
 		26A79A9126EAFA0D00AE46EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A9026EAFA0D00AE46EB /* main.m */; };
 		26A79A9A26EB249400AE46EB /* AERayCastingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A9926EB249400AE46EB /* AERayCastingController.m */; };
 		26A79A9E26EB24CC00AE46EB /* AEPersonOcclusionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A9D26EB24CC00AE46EB /* AEPersonOcclusionController.m */; };
+		26A79AA126EB271B00AE46EB /* kadan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26A79AA026EB271B00AE46EB /* kadan.usdz */; };
+		26A79AA426EB27E300AE46EB /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A79AA326EB27E300AE46EB /* RealityKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		26A79A9926EB249400AE46EB /* AERayCastingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AERayCastingController.m; sourceTree = "<group>"; };
 		26A79A9C26EB24CC00AE46EB /* AEPersonOcclusionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEPersonOcclusionController.h; sourceTree = "<group>"; };
 		26A79A9D26EB24CC00AE46EB /* AEPersonOcclusionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEPersonOcclusionController.m; sourceTree = "<group>"; };
+		26A79AA026EB271B00AE46EB /* kadan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = kadan.usdz; sourceTree = "<group>"; };
+		26A79AA326EB27E300AE46EB /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A79AA426EB27E300AE46EB /* RealityKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +55,7 @@
 			children = (
 				26A79A7D26EAFA0D00AE46EB /* ARKitDemo */,
 				26A79A7C26EAFA0D00AE46EB /* Products */,
+				26A79AA226EB27E300AE46EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +70,7 @@
 		26A79A7D26EAFA0D00AE46EB /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				26A79A9F26EB26E500AE46EB /* Assets */,
 				26A79A9B26EB24B700AE46EB /* PersonOcclusion */,
 				26A79A9726EB249400AE46EB /* RayCasting */,
 				26A79A7E26EAFA0D00AE46EB /* AppDelegate.h */,
@@ -95,6 +102,22 @@
 				26A79A9D26EB24CC00AE46EB /* AEPersonOcclusionController.m */,
 			);
 			path = PersonOcclusion;
+			sourceTree = "<group>";
+		};
+		26A79A9F26EB26E500AE46EB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				26A79AA026EB271B00AE46EB /* kadan.usdz */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		26A79AA226EB27E300AE46EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26A79AA326EB27E300AE46EB /* RealityKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26A79A8E26EAFA0D00AE46EB /* LaunchScreen.storyboard in Resources */,
+				26A79AA126EB271B00AE46EB /* kadan.usdz in Resources */,
 				26A79A8B26EAFA0D00AE46EB /* Assets.xcassets in Resources */,
 				26A79A8926EAFA0D00AE46EB /* Main.storyboard in Resources */,
 			);
@@ -314,6 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
 				INFOPLIST_FILE = ARKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,6 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
 				INFOPLIST_FILE = ARKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
