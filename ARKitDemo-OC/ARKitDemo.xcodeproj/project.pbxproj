@@ -8,20 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		26A79A8026EAFA0D00AE46EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A7F26EAFA0D00AE46EB /* AppDelegate.m */; };
-		26A79A8326EAFA0D00AE46EB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A8226EAFA0D00AE46EB /* SceneDelegate.m */; };
 		26A79A8626EAFA0D00AE46EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A8526EAFA0D00AE46EB /* ViewController.m */; };
 		26A79A8926EAFA0D00AE46EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A79A8726EAFA0D00AE46EB /* Main.storyboard */; };
 		26A79A8B26EAFA0D00AE46EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26A79A8A26EAFA0D00AE46EB /* Assets.xcassets */; };
 		26A79A8E26EAFA0D00AE46EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A79A8C26EAFA0D00AE46EB /* LaunchScreen.storyboard */; };
 		26A79A9126EAFA0D00AE46EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A9026EAFA0D00AE46EB /* main.m */; };
+		26A79A9A26EB249400AE46EB /* AERayCastingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A9926EB249400AE46EB /* AERayCastingController.m */; };
+		26A79A9E26EB24CC00AE46EB /* AEPersonOcclusionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A9D26EB24CC00AE46EB /* AEPersonOcclusionController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26A79A7B26EAFA0D00AE46EB /* ARKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A79A7E26EAFA0D00AE46EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26A79A7F26EAFA0D00AE46EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		26A79A8126EAFA0D00AE46EB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		26A79A8226EAFA0D00AE46EB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		26A79A8426EAFA0D00AE46EB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		26A79A8526EAFA0D00AE46EB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		26A79A8826EAFA0D00AE46EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,6 +28,10 @@
 		26A79A8D26EAFA0D00AE46EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26A79A8F26EAFA0D00AE46EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A79A9026EAFA0D00AE46EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		26A79A9826EB249400AE46EB /* AERayCastingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AERayCastingController.h; sourceTree = "<group>"; };
+		26A79A9926EB249400AE46EB /* AERayCastingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AERayCastingController.m; sourceTree = "<group>"; };
+		26A79A9C26EB24CC00AE46EB /* AEPersonOcclusionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEPersonOcclusionController.h; sourceTree = "<group>"; };
+		26A79A9D26EB24CC00AE46EB /* AEPersonOcclusionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEPersonOcclusionController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +64,10 @@
 		26A79A7D26EAFA0D00AE46EB /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				26A79A9B26EB24B700AE46EB /* PersonOcclusion */,
+				26A79A9726EB249400AE46EB /* RayCasting */,
 				26A79A7E26EAFA0D00AE46EB /* AppDelegate.h */,
 				26A79A7F26EAFA0D00AE46EB /* AppDelegate.m */,
-				26A79A8126EAFA0D00AE46EB /* SceneDelegate.h */,
-				26A79A8226EAFA0D00AE46EB /* SceneDelegate.m */,
 				26A79A8426EAFA0D00AE46EB /* ViewController.h */,
 				26A79A8526EAFA0D00AE46EB /* ViewController.m */,
 				26A79A8726EAFA0D00AE46EB /* Main.storyboard */,
@@ -74,6 +77,24 @@
 				26A79A9026EAFA0D00AE46EB /* main.m */,
 			);
 			path = ARKitDemo;
+			sourceTree = "<group>";
+		};
+		26A79A9726EB249400AE46EB /* RayCasting */ = {
+			isa = PBXGroup;
+			children = (
+				26A79A9826EB249400AE46EB /* AERayCastingController.h */,
+				26A79A9926EB249400AE46EB /* AERayCastingController.m */,
+			);
+			path = RayCasting;
+			sourceTree = "<group>";
+		};
+		26A79A9B26EB24B700AE46EB /* PersonOcclusion */ = {
+			isa = PBXGroup;
+			children = (
+				26A79A9C26EB24CC00AE46EB /* AEPersonOcclusionController.h */,
+				26A79A9D26EB24CC00AE46EB /* AEPersonOcclusionController.m */,
+			);
+			path = PersonOcclusion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +168,9 @@
 			files = (
 				26A79A8626EAFA0D00AE46EB /* ViewController.m in Sources */,
 				26A79A8026EAFA0D00AE46EB /* AppDelegate.m in Sources */,
+				26A79A9A26EB249400AE46EB /* AERayCastingController.m in Sources */,
 				26A79A9126EAFA0D00AE46EB /* main.m in Sources */,
-				26A79A8326EAFA0D00AE46EB /* SceneDelegate.m in Sources */,
+				26A79A9E26EB24CC00AE46EB /* AEPersonOcclusionController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
