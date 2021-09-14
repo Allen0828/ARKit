@@ -17,6 +17,7 @@
 		26A79A9E26EB24CC00AE46EB /* AEPersonOcclusionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A9D26EB24CC00AE46EB /* AEPersonOcclusionController.m */; };
 		26A79AA126EB271B00AE46EB /* kadan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26A79AA026EB271B00AE46EB /* kadan.usdz */; };
 		26A79AA426EB27E300AE46EB /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A79AA326EB27E300AE46EB /* RealityKit.framework */; };
+		26A79AB226F0458100AE46EB /* AppleWatch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26A79AB126F0458100AE46EB /* AppleWatch.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		26A79A9D26EB24CC00AE46EB /* AEPersonOcclusionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEPersonOcclusionController.m; sourceTree = "<group>"; };
 		26A79AA026EB271B00AE46EB /* kadan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = kadan.usdz; sourceTree = "<group>"; };
 		26A79AA326EB27E300AE46EB /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
+		26A79AB126F0458100AE46EB /* AppleWatch.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AppleWatch.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		26A79A9F26EB26E500AE46EB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				26A79AB126F0458100AE46EB /* AppleWatch.usdz */,
 				26A79AA026EB271B00AE46EB /* kadan.usdz */,
 			);
 			path = Assets;
@@ -179,6 +182,7 @@
 				26A79A8E26EAFA0D00AE46EB /* LaunchScreen.storyboard in Resources */,
 				26A79AA126EB271B00AE46EB /* kadan.usdz in Resources */,
 				26A79A8B26EAFA0D00AE46EB /* Assets.xcassets in Resources */,
+				26A79AB226F0458100AE46EB /* AppleWatch.usdz in Resources */,
 				26A79A8926EAFA0D00AE46EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
