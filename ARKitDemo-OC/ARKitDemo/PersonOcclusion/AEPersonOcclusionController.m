@@ -18,6 +18,7 @@
 @property (nonatomic, strong) SCNNode *node;
 
 @property (nonatomic, strong) UILabel *msgLa;
+@property (nonatomic, strong) UISwitch *sw;
 
 @end
 
@@ -41,22 +42,15 @@
     self.msgLa = [[UILabel alloc]initWithFrame:CGRectMake(100, 100, 200, 40)];
     self.msgLa.text = @"点击屏幕添加模型";
     [self.view addSubview:self.msgLa];
+    
+    self.sw = [[UISwitch alloc] initWithFrame:CGRectMake(100, 150, 100, 50)];
+    [self.sw addTarget:self action:@selector(switchDidChange:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:self.sw];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     ARWorldTrackingConfiguration *config = [ARWorldTrackingConfiguration new];
-    
-//    config.frameSemantics = ARFrameSemanticPersonSegmentationWithDepth;
-    
-//    switch (config.frameSemantics) {
-//        case ARFrameSemanticPersonSegmentationWithDepth:
-//            config.frameSemantics = (ARFrameSemanticNone | ARFrameSemanticBodyDetection);
-//            break;
-//
-//        default:
-//            break;
-//    }
     [self.arView.session runWithConfiguration:config];
 }
 
@@ -87,6 +81,24 @@
     }
     [self.arView.scene.rootNode addChildNode:shipNode];
     self.node = shipNode;
+    self.msgLa.text = @"已添加场景";
+}
+
+- (void)switchDidChange:(UISwitch *)sw {
+    if (![ARWorldTrackingConfiguration supportsFrameSemantics:ARFrameSemanticPersonSegmentation]) {
+        self.msgLa.text = @"手机不支持人形遮挡";
+        [sw setOn:false];
+        return;
+    }
+    if (sw.isOn) {
+        ARWorldTrackingConfiguration *config = [ARWorldTrackingConfiguration new];
+        config.frameSemantics = ARFrameSemanticPersonSegmentationWithDepth;
+        [self.arView.session runWithConfiguration:config];
+    } else {
+        ARWorldTrackingConfiguration *config = [ARWorldTrackingConfiguration new];
+        config.frameSemantics = ARFrameSemanticNone;
+        [self.arView.session runWithConfiguration:config];
+    }
 }
 
 
