@@ -18,6 +18,7 @@
 		26A79AA126EB271B00AE46EB /* kadan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26A79AA026EB271B00AE46EB /* kadan.usdz */; };
 		26A79AA426EB27E300AE46EB /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A79AA326EB27E300AE46EB /* RealityKit.framework */; };
 		26A79AB226F0458100AE46EB /* AppleWatch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26A79AB126F0458100AE46EB /* AppleWatch.usdz */; };
+		26A79BF326F3436F00AE46EB /* AEFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79BF226F3436F00AE46EB /* AEFaceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		26A79AA026EB271B00AE46EB /* kadan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = kadan.usdz; sourceTree = "<group>"; };
 		26A79AA326EB27E300AE46EB /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
 		26A79AB126F0458100AE46EB /* AppleWatch.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AppleWatch.usdz; sourceTree = "<group>"; };
+		26A79BF126F3436F00AE46EB /* AEFaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEFaceViewController.h; sourceTree = "<group>"; };
+		26A79BF226F3436F00AE46EB /* AEFaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEFaceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 		26A79A7D26EAFA0D00AE46EB /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				26A79BF026F3434400AE46EB /* Face */,
 				26A79A9F26EB26E500AE46EB /* Assets */,
 				26A79A9B26EB24B700AE46EB /* PersonOcclusion */,
 				26A79A9726EB249400AE46EB /* RayCasting */,
@@ -121,6 +125,15 @@
 				26A79AA326EB27E300AE46EB /* RealityKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26A79BF026F3434400AE46EB /* Face */ = {
+			isa = PBXGroup;
+			children = (
+				26A79BF126F3436F00AE46EB /* AEFaceViewController.h */,
+				26A79BF226F3436F00AE46EB /* AEFaceViewController.m */,
+			);
+			path = Face;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +212,7 @@
 				26A79A9A26EB249400AE46EB /* AERayCastingController.m in Sources */,
 				26A79A9126EAFA0D00AE46EB /* main.m in Sources */,
 				26A79A9E26EB24CC00AE46EB /* AEPersonOcclusionController.m in Sources */,
+				26A79BF326F3436F00AE46EB /* AEFaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

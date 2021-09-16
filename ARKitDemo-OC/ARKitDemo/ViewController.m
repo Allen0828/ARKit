@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "AERayCastingController.h"
+#import "AEFaceViewController.h"
 
 #import "AEPersonOcclusionController.h"
 
@@ -60,6 +61,9 @@
             break;
         case 3:
             [self.navigationController pushViewController:[AERayCastingController new] animated:true];
+            break;
+        case 8:
+            [self.navigationController pushViewController:[AEFaceViewController new] animated:true];
             break;
         case 11:
             [self.navigationController pushViewController:[AEPersonOcclusionController new] animated:true];
