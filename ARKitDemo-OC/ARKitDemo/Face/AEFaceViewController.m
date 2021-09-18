@@ -33,8 +33,18 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.config = [[ARFaceTrackingConfiguration alloc] init];
-    self.config.lightEstimationEnabled = YES;
+//    self.config.lightEstimationEnabled = YES;
     [self.arView.session runWithConfiguration:self.config];
+
+//    [ARObjectScanningConfiguration new]       // 扫描
+//    [ARGeoTrackingConfiguration new];         // 世界地图跟踪
+//    [ARBodyTrackingConfiguration new];        // 人体动作捕捉
+//    ARFaceTrackingConfiguration               // 面部识别 运动和面部表情
+//    [ARImageTrackingConfiguration new];       // 跟踪通过trackingImages提供的已知图像
+//    [ARWorldTrackingConfiguration new];       // 命中测试
+//    [ARPositionalTrackingConfiguration new];  // 位置跟踪 3D空间中的位置
+//    [AROrientationTrackingConfiguration new]; // 运行方向跟踪
+    
 }
 
 

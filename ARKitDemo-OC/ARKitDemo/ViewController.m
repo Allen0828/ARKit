@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import "AERayCastingController.h"
 #import "AEFaceViewController.h"
-
+#import "AEImageViewController.h"
 #import "AEPersonOcclusionController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -62,6 +62,10 @@
         case 3:
             [self.navigationController pushViewController:[AERayCastingController new] animated:true];
             break;
+        case 4:
+            [self.navigationController pushViewController:[AEImageViewController new] animated:true];
+            break;
+            
         case 8:
             [self.navigationController pushViewController:[AEFaceViewController new] animated:true];
             break;
