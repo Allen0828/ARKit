@@ -15,7 +15,6 @@
 @property (nonatomic, strong) ARSession *session;
 @property (nonatomic, strong) ARImageTrackingConfiguration *config;
 
-@property (nonatomic, strong) UIImageView *imgView;
 
 @end
 
@@ -30,44 +29,74 @@
     self.arView  = [[ARSCNView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.arView.delegate = self;
     self.arView.session = self.session;
+    self.arView.scene = [SCNScene sceneNamed:@"art.scnassets/GameScene.scn"];
     [self.view addSubview:self.arView];
-    
-    self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
-    [self.view addSubview:self.imgView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.config = [[ARImageTrackingConfiguration alloc] init];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"app-icon" ofType:@"png"];
+    self.config.maximumNumberOfTrackedImages = 1;
     
-    self.imgView.image = [UIImage imageWithContentsOfFile:path];
     
-    UIImage *img = [UIImage imageWithContentsOfFile:path];
-    CGImageRef imgRef = [img CGImage];
+    NSSet *set = [ARReferenceImage referenceImagesInGroupNamed:@"Test" bundle:[NSBundle mainBundle]];
     
-    ARReferenceImage *arImg = [[ARReferenceImage alloc] initWithCGImage:imgRef orientation:kCGImagePropertyOrientationUp physicalWidth:0.05];
-    self.config.trackingImages = [NSSet setWithObject:arImg];
-
-    
+    if (set.count == 0) {
+        NSLog(@"img load error");
+        return;
+    }
+    self.config.trackingImages = set;
     [self.arView.session runWithConfiguration:self.config];
 }
 
-- (SCNNode *)renderer:(id<SCNSceneRenderer>)renderer nodeForAnchor:(ARAnchor *)anchor {
-    ARImageAnchor *an = (ARImageAnchor*)anchor;
-    if (an == NULL) {
-        return nil;
+//- (SCNNode *)renderer:(id<SCNSceneRenderer>)renderer nodeForAnchor:(ARAnchor *)anchor {
+//    if (![anchor isKindOfClass:[ARImageAnchor class]]) {
+//        return nil;
+//    }
+//    SCNNode *node = [SCNNode new];
+//
+//    ARImageAnchor *imgAnchor = (ARImageAnchor *)anchor;
+//    NSLog(@"Anchor--name---%@", imgAnchor.name);
+//
+//    SCNPlane *plane = [SCNPlane planeWithWidth:imgAnchor.referenceImage.physicalSize.width height:imgAnchor.referenceImage.physicalSize.height];
+//    plane.firstMaterial.diffuse.contents = [UIColor colorWithWhite:1 alpha:0.8];
+//
+//    SCNNode *planeNode = [SCNNode nodeWithGeometry:plane];
+//    planeNode.eulerAngles = SCNVector3Make(-M_PI/2, 0, 0);
+//    SCNScene *scene = [SCNScene sceneNamed:@"art.scnassets/ship.scn"];
+//    SCNNode *shipNode = scene.rootNode.childNodes.firstObject;
+//    shipNode.position = SCNVector3Zero;
+//    shipNode.position = SCNVector3Make(0, 0, 0.15);
+//
+//    [planeNode addChildNode:shipNode];
+//    [node addChildNode:planeNode];
+//
+//    return node;
+//}
+
+
+- (void)session:(ARSession *)session didAddAnchors:(NSArray<__kindof ARAnchor *> *)anchors {
+    
+    if (anchors.count == 0 || ![anchors.firstObject isKindOfClass:[ARImageAnchor class]]) {
+        return;
     }
-    
-    return nil;
+    SCNScene *scene = [SCNScene sceneNamed:@"AppleWatch.usdz"];
+    SCNNode *watchNode = scene.rootNode.childNodes[0];
+    watchNode.scale = SCNVector3Make(0.02, 0.02, 0.02);
+
+    for (SCNNode *node in watchNode.childNodes) {
+        node.scale = SCNVector3Make(0.02, 0.02, 0.02);
+    }
+    [self.arView.scene.rootNode addChildNode:watchNode];
+
 }
 
-- (void)renderer:(id<SCNSceneRenderer>)renderer didAddNode:(SCNNode *)node forAnchor:(ARAnchor *)anchor {
+- (void)session:(ARSession *)session didUpdateAnchors:(NSArray<__kindof ARAnchor *> *)anchors {
     
+//    NSLog(@"didUpdateAnchors");
     
     
 }
-
 
 @end

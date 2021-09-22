@@ -20,7 +20,7 @@
 		26A79AB226F0458100AE46EB /* AppleWatch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26A79AB126F0458100AE46EB /* AppleWatch.usdz */; };
 		26A79BF326F3436F00AE46EB /* AEFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79BF226F3436F00AE46EB /* AEFaceViewController.m */; };
 		26A79BF826F5F7E400AE46EB /* AEImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79BF726F5F7E400AE46EB /* AEImageViewController.m */; };
-		26A79BFA26F5F92000AE46EB /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A79BF926F5F92000AE46EB /* app-icon.png */; };
+		26FC4EBE26FB1F380014D433 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FC4EBD26FB1F380014D433 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		26A79BF226F3436F00AE46EB /* AEFaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEFaceViewController.m; sourceTree = "<group>"; };
 		26A79BF626F5F7E400AE46EB /* AEImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEImageViewController.h; sourceTree = "<group>"; };
 		26A79BF726F5F7E400AE46EB /* AEImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEImageViewController.m; sourceTree = "<group>"; };
-		26A79BF926F5F92000AE46EB /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		26FC4EBD26FB1F380014D433 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +80,7 @@
 		26A79A7D26EAFA0D00AE46EB /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				26FC4EBD26FB1F380014D433 /* art.scnassets */,
 				26A79A9F26EB26E500AE46EB /* Assets */,
 				26A79BF526F5F7D500AE46EB /* Image */,
 				26A79BF026F3434400AE46EB /* Face */,
@@ -119,7 +120,6 @@
 		26A79A9F26EB26E500AE46EB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				26A79BF926F5F92000AE46EB /* app-icon.png */,
 				26A79AB126F0458100AE46EB /* AppleWatch.usdz */,
 				26A79AA026EB271B00AE46EB /* kadan.usdz */,
 			);
@@ -209,8 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				26A79A8E26EAFA0D00AE46EB /* LaunchScreen.storyboard in Resources */,
+				26FC4EBE26FB1F380014D433 /* art.scnassets in Resources */,
 				26A79AA126EB271B00AE46EB /* kadan.usdz in Resources */,
-				26A79BFA26F5F92000AE46EB /* app-icon.png in Resources */,
 				26A79A8B26EAFA0D00AE46EB /* Assets.xcassets in Resources */,
 				26A79AB226F0458100AE46EB /* AppleWatch.usdz in Resources */,
 				26A79A8926EAFA0D00AE46EB /* Main.storyboard in Resources */,

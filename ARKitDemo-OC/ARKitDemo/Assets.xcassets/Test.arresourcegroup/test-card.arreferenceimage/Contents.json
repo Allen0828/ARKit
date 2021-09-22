@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "test-card.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "width" : 0.10000000000000001
+  }
+}

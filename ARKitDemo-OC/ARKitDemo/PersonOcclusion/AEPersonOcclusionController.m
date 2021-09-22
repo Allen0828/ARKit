@@ -72,15 +72,15 @@
     SCNScene *scene = [SCNScene sceneNamed:@"AppleWatch.usdz"];
 //    self.arView.scene = scene;
     self.model = scene;
-    SCNNode *shipNode = scene.rootNode.childNodes[0];
-    shipNode.scale = SCNVector3Make(0.05, 0.05, 0.05);
+    SCNNode *watchNode = scene.rootNode.childNodes[0];
+    watchNode.scale = SCNVector3Make(0.05, 0.05, 0.05);
 //    shipNode.position = SCNVector3Make(0, 0, 0);
-    for (SCNNode *node in shipNode.childNodes) {
+    for (SCNNode *node in watchNode.childNodes) {
         node.scale = SCNVector3Make(0.05, 0.05, 0.05);
 //        node.position = SCNVector3Make(0, 0, 0);
     }
-    [self.arView.scene.rootNode addChildNode:shipNode];
-    self.node = shipNode;
+    [self.arView.scene.rootNode addChildNode:watchNode];
+    self.node = watchNode;
     self.msgLa.text = @"已添加场景";
 }
 
