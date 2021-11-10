@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26669BC7273B695D00BFCDC3 /* AREyeBlinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26669BC6273B695D00BFCDC3 /* AREyeBlinkController.m */; };
 		26A79A8026EAFA0D00AE46EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A7F26EAFA0D00AE46EB /* AppDelegate.m */; };
 		26A79A8626EAFA0D00AE46EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A8526EAFA0D00AE46EB /* ViewController.m */; };
 		26A79A8926EAFA0D00AE46EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A79A8726EAFA0D00AE46EB /* Main.storyboard */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26669BC5273B695D00BFCDC3 /* AREyeBlinkController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AREyeBlinkController.h; sourceTree = "<group>"; };
+		26669BC6273B695D00BFCDC3 /* AREyeBlinkController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AREyeBlinkController.m; sourceTree = "<group>"; };
 		26A79A7B26EAFA0D00AE46EB /* ARKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A79A7E26EAFA0D00AE46EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26A79A7F26EAFA0D00AE46EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26669BC4273B694600BFCDC3 /* EyeBlink */ = {
+			isa = PBXGroup;
+			children = (
+				26669BC5273B695D00BFCDC3 /* AREyeBlinkController.h */,
+				26669BC6273B695D00BFCDC3 /* AREyeBlinkController.m */,
+			);
+			path = EyeBlink;
+			sourceTree = "<group>";
+		};
 		26A79A7226EAFA0D00AE46EB = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +92,7 @@
 		26A79A7D26EAFA0D00AE46EB /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				26669BC4273B694600BFCDC3 /* EyeBlink */,
 				26FC4EBD26FB1F380014D433 /* art.scnassets */,
 				26A79A9F26EB26E500AE46EB /* Assets */,
 				26A79BF526F5F7D500AE46EB /* Image */,
@@ -227,6 +240,7 @@
 				26A79BF826F5F7E400AE46EB /* AEImageViewController.m in Sources */,
 				26A79A8626EAFA0D00AE46EB /* ViewController.m in Sources */,
 				26A79A8026EAFA0D00AE46EB /* AppDelegate.m in Sources */,
+				26669BC7273B695D00BFCDC3 /* AREyeBlinkController.m in Sources */,
 				26A79A9A26EB249400AE46EB /* AERayCastingController.m in Sources */,
 				26A79A9126EAFA0D00AE46EB /* main.m in Sources */,
 				26A79A9E26EB24CC00AE46EB /* AEPersonOcclusionController.m in Sources */,

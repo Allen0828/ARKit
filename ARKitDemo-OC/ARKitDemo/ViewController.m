@@ -10,6 +10,7 @@
 #import "AEFaceViewController.h"
 #import "AEImageViewController.h"
 #import "AEPersonOcclusionController.h"
+#import "AREyeBlinkController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -69,6 +70,10 @@
         case 8:
             [self.navigationController pushViewController:[AEFaceViewController new] animated:true];
             break;
+        case 10:
+            [self.navigationController pushViewController:[AREyeBlinkController new] animated:true];
+            break;
+            
         case 11:
             [self.navigationController pushViewController:[AEPersonOcclusionController new] animated:true];
             break;

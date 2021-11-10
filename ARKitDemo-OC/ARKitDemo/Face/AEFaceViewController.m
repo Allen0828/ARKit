@@ -47,6 +47,10 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.arView.session pause];
+}
 
 - (void)session:(ARSession *)session didUpdateAnchors:(NSArray<__kindof ARAnchor *> *)anchors {
     if (anchors.count == 0 || ![anchors.firstObject isKindOfClass:[ARFaceAnchor class]]) {
