@@ -65,6 +65,15 @@
 
 - (void)session:(ARSession *)session didUpdateFrame:(ARFrame *)frame {
     
+    if (frame.camera.trackingState == ARTrackingStateNormal) {
+        NSLog(@"000-ARTrackingStateNormal----%ld", (long)frame.camera.trackingState);
+    } else if (frame.camera.trackingState == ARTrackingStateLimited) {
+        NSLog(@"111-ARTrackingStateLimited----%ld", (long)frame.camera.trackingState);
+    } else {
+        NSLog(@"222-other----%ld", (long)frame.camera.trackingState);
+    }
+    
+    
 //    ARRaycastQuery *query2 = [frame raycastQueryFromPoint:self.view.center allowingTarget:ARRaycastTargetEstimatedPlane alignment:ARRaycastTargetAlignmentHorizontal];
 //
 //    ARTrackedRaycast *ray = [self.session trackedRaycast:query2 updateHandler:^(NSArray<ARRaycastResult *> * _Nonnull arr) {

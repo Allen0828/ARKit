@@ -21,6 +21,7 @@
 		26A79AB226F0458100AE46EB /* AppleWatch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26A79AB126F0458100AE46EB /* AppleWatch.usdz */; };
 		26A79BF326F3436F00AE46EB /* AEFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79BF226F3436F00AE46EB /* AEFaceViewController.m */; };
 		26A79BF826F5F7E400AE46EB /* AEImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79BF726F5F7E400AE46EB /* AEImageViewController.m */; };
+		26CEC1B1274775290067BFE3 /* AENormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEC1B0274775290067BFE3 /* AENormalViewController.m */; };
 		26FC4EBE26FB1F380014D433 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FC4EBD26FB1F380014D433 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		26A79BF226F3436F00AE46EB /* AEFaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEFaceViewController.m; sourceTree = "<group>"; };
 		26A79BF626F5F7E400AE46EB /* AEImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEImageViewController.h; sourceTree = "<group>"; };
 		26A79BF726F5F7E400AE46EB /* AEImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEImageViewController.m; sourceTree = "<group>"; };
+		26CEC1AF274775290067BFE3 /* AENormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AENormalViewController.h; sourceTree = "<group>"; };
+		26CEC1B0274775290067BFE3 /* AENormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AENormalViewController.m; sourceTree = "<group>"; };
 		26FC4EBD26FB1F380014D433 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +95,7 @@
 		26A79A7D26EAFA0D00AE46EB /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				26CEC1AE274774C60067BFE3 /* Normal */,
 				26669BC4273B694600BFCDC3 /* EyeBlink */,
 				26FC4EBD26FB1F380014D433 /* art.scnassets */,
 				26A79A9F26EB26E500AE46EB /* Assets */,
@@ -163,6 +167,15 @@
 				26A79BF726F5F7E400AE46EB /* AEImageViewController.m */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		26CEC1AE274774C60067BFE3 /* Normal */ = {
+			isa = PBXGroup;
+			children = (
+				26CEC1AF274775290067BFE3 /* AENormalViewController.h */,
+				26CEC1B0274775290067BFE3 /* AENormalViewController.m */,
+			);
+			path = Normal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +257,7 @@
 				26A79A9A26EB249400AE46EB /* AERayCastingController.m in Sources */,
 				26A79A9126EAFA0D00AE46EB /* main.m in Sources */,
 				26A79A9E26EB24CC00AE46EB /* AEPersonOcclusionController.m in Sources */,
+				26CEC1B1274775290067BFE3 /* AENormalViewController.m in Sources */,
 				26A79BF326F3436F00AE46EB /* AEFaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
