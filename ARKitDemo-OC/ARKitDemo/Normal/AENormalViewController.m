@@ -33,7 +33,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    ARConfiguration *conf = [ARWorldTrackingConfiguration new];
+    ARWorldTrackingConfiguration *conf = [ARWorldTrackingConfiguration new];
+    conf.planeDetection = (ARPlaneDetectionVertical | ARPlaneDetectionHorizontal);
     [self.session runWithConfiguration:conf];
 
 }
