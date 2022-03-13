@@ -12,6 +12,10 @@
 #import "AEPersonOcclusionController.h"
 #import "AREyeBlinkController.h"
 #import "AENormalViewController.h"
+#import "ARBodyViewController.h"
+
+
+#import "ARKitDemo-Swift.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -73,7 +77,13 @@
             [self.navigationController pushViewController:[AEFaceViewController new] animated:true];
             break;
         case 10:
-            [self.navigationController pushViewController:[AREyeBlinkController new] animated:true];
+            // AREyeBlinkController
+//            [ARBodySwiftController new]; [ARBodyViewController new]
+            if (@available(iOS 13.0, *)) {
+                [self.navigationController pushViewController:[ARBodyViewController new] animated:true];
+            } else {
+                // Fallback on earlier versions
+            }
             break;
             
         case 11:

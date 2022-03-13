@@ -81,7 +81,7 @@
     if (anchors.count == 0 || ![anchors.firstObject isKindOfClass:[ARImageAnchor class]]) {
         return;
     }
-    SCNScene *scene = [SCNScene sceneNamed:@"AppleWatch.usdz"];
+    SCNScene *scene = [SCNScene sceneNamed:@"kadan.usdz"]; // AppleWatch.usdz
     SCNNode *watchNode = scene.rootNode.childNodes[0];
     watchNode.scale = SCNVector3Make(0.02, 0.02, 0.02);
 
@@ -90,6 +90,8 @@
     }
     [self.arView.scene.rootNode addChildNode:watchNode];
 
+    
+    
 }
 
 - (void)session:(ARSession *)session didUpdateAnchors:(NSArray<__kindof ARAnchor *> *)anchors {

@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262F311827D8BED6002A21F6 /* ARBodyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262F311727D8BED6002A21F6 /* ARBodyViewController.m */; };
+		262F311B27D8C2B2002A21F6 /* ARBodySwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F311A27D8C2B2002A21F6 /* ARBodySwiftController.swift */; };
+		262F311E27D8C706002A21F6 /* robot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 262F311D27D8C706002A21F6 /* robot.usdz */; };
+		262F312027D8C75F002A21F6 /* ARBodyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262F311F27D8C75F002A21F6 /* ARBodyUtils.swift */; };
+		2648E35E274BA3B500C4F1DC /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 2648E35D274BA3B500C4F1DC /* test.html */; };
 		26669BC7273B695D00BFCDC3 /* AREyeBlinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26669BC6273B695D00BFCDC3 /* AREyeBlinkController.m */; };
+		2690D31727C611B000436B78 /* ARSessionNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 2690D31627C611B000436B78 /* ARSessionNative.m */; };
 		26A79A8026EAFA0D00AE46EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A7F26EAFA0D00AE46EB /* AppDelegate.m */; };
 		26A79A8626EAFA0D00AE46EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A8526EAFA0D00AE46EB /* ViewController.m */; };
 		26A79A8926EAFA0D00AE46EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A79A8726EAFA0D00AE46EB /* Main.storyboard */; };
@@ -17,17 +23,27 @@
 		26A79A9A26EB249400AE46EB /* AERayCastingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A9926EB249400AE46EB /* AERayCastingController.m */; };
 		26A79A9E26EB24CC00AE46EB /* AEPersonOcclusionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79A9D26EB24CC00AE46EB /* AEPersonOcclusionController.m */; };
 		26A79AA126EB271B00AE46EB /* kadan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26A79AA026EB271B00AE46EB /* kadan.usdz */; };
-		26A79AA426EB27E300AE46EB /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A79AA326EB27E300AE46EB /* RealityKit.framework */; };
+		26A79AA426EB27E300AE46EB /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A79AA326EB27E300AE46EB /* RealityKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		26A79AB226F0458100AE46EB /* AppleWatch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26A79AB126F0458100AE46EB /* AppleWatch.usdz */; };
 		26A79BF326F3436F00AE46EB /* AEFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79BF226F3436F00AE46EB /* AEFaceViewController.m */; };
 		26A79BF826F5F7E400AE46EB /* AEImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A79BF726F5F7E400AE46EB /* AEImageViewController.m */; };
 		26CEC1B1274775290067BFE3 /* AENormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEC1B0274775290067BFE3 /* AENormalViewController.m */; };
+		26F173B327BF8CB900E22AD7 /* BaLeiWuQun.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26F173B227BF8CB900E22AD7 /* BaLeiWuQun.gltf */; };
 		26FC4EBE26FB1F380014D433 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 26FC4EBD26FB1F380014D433 /* art.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		262F311627D8BED6002A21F6 /* ARBodyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARBodyViewController.h; sourceTree = "<group>"; };
+		262F311727D8BED6002A21F6 /* ARBodyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARBodyViewController.m; sourceTree = "<group>"; };
+		262F311927D8C2B2002A21F6 /* ARKitDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARKitDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		262F311A27D8C2B2002A21F6 /* ARBodySwiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBodySwiftController.swift; sourceTree = "<group>"; };
+		262F311D27D8C706002A21F6 /* robot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot.usdz; sourceTree = "<group>"; };
+		262F311F27D8C75F002A21F6 /* ARBodyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARBodyUtils.swift; sourceTree = "<group>"; };
+		2648E35D274BA3B500C4F1DC /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		26669BC5273B695D00BFCDC3 /* AREyeBlinkController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AREyeBlinkController.h; sourceTree = "<group>"; };
 		26669BC6273B695D00BFCDC3 /* AREyeBlinkController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AREyeBlinkController.m; sourceTree = "<group>"; };
+		2690D31527C611B000436B78 /* ARSessionNative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARSessionNative.h; sourceTree = "<group>"; };
+		2690D31627C611B000436B78 /* ARSessionNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARSessionNative.m; sourceTree = "<group>"; };
 		26A79A7B26EAFA0D00AE46EB /* ARKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A79A7E26EAFA0D00AE46EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26A79A7F26EAFA0D00AE46EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +67,7 @@
 		26A79BF726F5F7E400AE46EB /* AEImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEImageViewController.m; sourceTree = "<group>"; };
 		26CEC1AF274775290067BFE3 /* AENormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AENormalViewController.h; sourceTree = "<group>"; };
 		26CEC1B0274775290067BFE3 /* AENormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AENormalViewController.m; sourceTree = "<group>"; };
+		26F173B227BF8CB900E22AD7 /* BaLeiWuQun.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BaLeiWuQun.gltf; sourceTree = "<group>"; };
 		26FC4EBD26FB1F380014D433 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +83,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		262F311527D8BEAF002A21F6 /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				262F311F27D8C75F002A21F6 /* ARBodyUtils.swift */,
+				262F311627D8BED6002A21F6 /* ARBodyViewController.h */,
+				262F311727D8BED6002A21F6 /* ARBodyViewController.m */,
+				262F311A27D8C2B2002A21F6 /* ARBodySwiftController.swift */,
+				262F311927D8C2B2002A21F6 /* ARKitDemo-Bridging-Header.h */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
 		26669BC4273B694600BFCDC3 /* EyeBlink */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +102,15 @@
 				26669BC6273B695D00BFCDC3 /* AREyeBlinkController.m */,
 			);
 			path = EyeBlink;
+			sourceTree = "<group>";
+		};
+		2690D31427C6118500436B78 /* ARSessionNative */ = {
+			isa = PBXGroup;
+			children = (
+				2690D31527C611B000436B78 /* ARSessionNative.h */,
+				2690D31627C611B000436B78 /* ARSessionNative.m */,
+			);
+			path = ARSessionNative;
 			sourceTree = "<group>";
 		};
 		26A79A7226EAFA0D00AE46EB = {
@@ -95,6 +133,8 @@
 		26A79A7D26EAFA0D00AE46EB /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				262F311527D8BEAF002A21F6 /* Body */,
+				2690D31427C6118500436B78 /* ARSessionNative */,
 				26CEC1AE274774C60067BFE3 /* Normal */,
 				26669BC4273B694600BFCDC3 /* EyeBlink */,
 				26FC4EBD26FB1F380014D433 /* art.scnassets */,
@@ -137,6 +177,8 @@
 		26A79A9F26EB26E500AE46EB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				262F311D27D8C706002A21F6 /* robot.usdz */,
+				26F173B227BF8CB900E22AD7 /* BaLeiWuQun.gltf */,
 				26A79AB126F0458100AE46EB /* AppleWatch.usdz */,
 				26A79AA026EB271B00AE46EB /* kadan.usdz */,
 			);
@@ -172,6 +214,7 @@
 		26CEC1AE274774C60067BFE3 /* Normal */ = {
 			isa = PBXGroup;
 			children = (
+				2648E35D274BA3B500C4F1DC /* test.html */,
 				26CEC1AF274775290067BFE3 /* AENormalViewController.h */,
 				26CEC1B0274775290067BFE3 /* AENormalViewController.m */,
 			);
@@ -208,6 +251,7 @@
 				TargetAttributes = {
 					26A79A7A26EAFA0D00AE46EB = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -234,12 +278,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2648E35E274BA3B500C4F1DC /* test.html in Resources */,
+				262F311E27D8C706002A21F6 /* robot.usdz in Resources */,
 				26A79A8E26EAFA0D00AE46EB /* LaunchScreen.storyboard in Resources */,
 				26FC4EBE26FB1F380014D433 /* art.scnassets in Resources */,
 				26A79AA126EB271B00AE46EB /* kadan.usdz in Resources */,
 				26A79A8B26EAFA0D00AE46EB /* Assets.xcassets in Resources */,
 				26A79AB226F0458100AE46EB /* AppleWatch.usdz in Resources */,
 				26A79A8926EAFA0D00AE46EB /* Main.storyboard in Resources */,
+				26F173B327BF8CB900E22AD7 /* BaLeiWuQun.gltf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262F311B27D8C2B2002A21F6 /* ARBodySwiftController.swift in Sources */,
 				26A79BF826F5F7E400AE46EB /* AEImageViewController.m in Sources */,
 				26A79A8626EAFA0D00AE46EB /* ViewController.m in Sources */,
+				262F311827D8BED6002A21F6 /* ARBodyViewController.m in Sources */,
 				26A79A8026EAFA0D00AE46EB /* AppDelegate.m in Sources */,
 				26669BC7273B695D00BFCDC3 /* AREyeBlinkController.m in Sources */,
+				2690D31727C611B000436B78 /* ARSessionNative.m in Sources */,
+				262F312027D8C75F002A21F6 /* ARBodyUtils.swift in Sources */,
 				26A79A9A26EB249400AE46EB /* AERayCastingController.m in Sources */,
 				26A79A9126EAFA0D00AE46EB /* main.m in Sources */,
 				26A79A9E26EB24CC00AE46EB /* AEPersonOcclusionController.m in Sources */,
@@ -401,16 +452,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D5M8CJ9NDR;
 				INFOPLIST_FILE = ARKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.girtWorld.framework.ARKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARKitDemo/Body/ARKitDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -420,16 +478,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D5M8CJ9NDR;
 				INFOPLIST_FILE = ARKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.girtWorld.framework.ARKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARKitDemo/Body/ARKitDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
