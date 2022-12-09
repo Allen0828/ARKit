@@ -13,10 +13,13 @@
 		26074B00292DC58A00D8A22A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26074AFF292DC58A00D8A22A /* Assets.xcassets */; };
 		26074B03292DC58A00D8A22A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26074B01292DC58A00D8A22A /* LaunchScreen.storyboard */; };
 		26074B06292DC58A00D8A22A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26074B05292DC58A00D8A22A /* main.m */; };
-		26074B0F292DC6F500D8A22A /* ARPlaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26074B0E292DC6F500D8A22A /* ARPlaneController.m */; };
-		26074B12292DFAF300D8A22A /* ARPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 26074B11292DFAF300D8A22A /* ARPlane.m */; };
+		26074B0F292DC6F500D8A22A /* ARPlaneController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26074B0E292DC6F500D8A22A /* ARPlaneController.mm */; };
 		2670B53A29388A52007151C4 /* ARMetalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2670B53929388A52007151C4 /* ARMetalController.m */; };
 		2670B53C2938998F007151C4 /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2670B53B2938998F007151C4 /* shaders.metal */; };
+		26800322293D99E4001D831D /* AEAR.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26800321293D99E4001D831D /* AEAR.mm */; };
+		26800326293DF1E8001D831D /* ARBodyController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26800325293DF1E8001D831D /* ARBodyController.mm */; };
+		26C5EA082941E9DA00BA71AC /* DeWuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C5EA072941E9DA00BA71AC /* DeWuViewController.m */; };
+		26C5EA0D2942D14200BA71AC /* AppleWatch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +34,17 @@
 		26074B04292DC58A00D8A22A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26074B05292DC58A00D8A22A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26074B0D292DC6F500D8A22A /* ARPlaneController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARPlaneController.h; sourceTree = "<group>"; };
-		26074B0E292DC6F500D8A22A /* ARPlaneController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARPlaneController.m; sourceTree = "<group>"; };
-		26074B10292DFAF300D8A22A /* ARPlane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARPlane.h; sourceTree = "<group>"; };
-		26074B11292DFAF300D8A22A /* ARPlane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARPlane.m; sourceTree = "<group>"; };
+		26074B0E292DC6F500D8A22A /* ARPlaneController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ARPlaneController.mm; sourceTree = "<group>"; };
 		2670B53829388A52007151C4 /* ARMetalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARMetalController.h; sourceTree = "<group>"; };
 		2670B53929388A52007151C4 /* ARMetalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARMetalController.m; sourceTree = "<group>"; };
 		2670B53B2938998F007151C4 /* shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shaders.metal; sourceTree = "<group>"; };
+		26800320293D99E4001D831D /* AEAR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEAR.h; sourceTree = "<group>"; };
+		26800321293D99E4001D831D /* AEAR.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AEAR.mm; sourceTree = "<group>"; };
+		26800324293DF1E8001D831D /* ARBodyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARBodyController.h; sourceTree = "<group>"; };
+		26800325293DF1E8001D831D /* ARBodyController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ARBodyController.mm; sourceTree = "<group>"; };
+		26C5EA062941E9DA00BA71AC /* DeWuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeWuViewController.h; sourceTree = "<group>"; };
+		26C5EA072941E9DA00BA71AC /* DeWuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeWuViewController.m; sourceTree = "<group>"; };
+		26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AppleWatch.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,9 @@
 		26074AF2292DC58800D8A22A /* ARExample */ = {
 			isa = PBXGroup;
 			children = (
+				26C5EA092941F30900BA71AC /* Assets */,
+				26C5EA052941E9B700BA71AC /* DeWu */,
+				26800323293DF1D0001D831D /* Body */,
 				2670B53729388A39007151C4 /* Metal */,
 				26074B0C292DC6D600D8A22A /* Plane */,
 				26074AF3292DC58800D8A22A /* AppDelegate.h */,
@@ -88,9 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				26074B0D292DC6F500D8A22A /* ARPlaneController.h */,
-				26074B0E292DC6F500D8A22A /* ARPlaneController.m */,
-				26074B10292DFAF300D8A22A /* ARPlane.h */,
-				26074B11292DFAF300D8A22A /* ARPlane.m */,
+				26074B0E292DC6F500D8A22A /* ARPlaneController.mm */,
 			);
 			path = Plane;
 			sourceTree = "<group>";
@@ -98,11 +107,39 @@
 		2670B53729388A39007151C4 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
+				26800320293D99E4001D831D /* AEAR.h */,
+				26800321293D99E4001D831D /* AEAR.mm */,
 				2670B53829388A52007151C4 /* ARMetalController.h */,
 				2670B53929388A52007151C4 /* ARMetalController.m */,
 				2670B53B2938998F007151C4 /* shaders.metal */,
 			);
 			path = Metal;
+			sourceTree = "<group>";
+		};
+		26800323293DF1D0001D831D /* Body */ = {
+			isa = PBXGroup;
+			children = (
+				26800324293DF1E8001D831D /* ARBodyController.h */,
+				26800325293DF1E8001D831D /* ARBodyController.mm */,
+			);
+			path = Body;
+			sourceTree = "<group>";
+		};
+		26C5EA052941E9B700BA71AC /* DeWu */ = {
+			isa = PBXGroup;
+			children = (
+				26C5EA062941E9DA00BA71AC /* DeWuViewController.h */,
+				26C5EA072941E9DA00BA71AC /* DeWuViewController.m */,
+			);
+			path = DeWu;
+			sourceTree = "<group>";
+		};
+		26C5EA092941F30900BA71AC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +201,7 @@
 			files = (
 				26074B03292DC58A00D8A22A /* LaunchScreen.storyboard in Resources */,
 				26074B00292DC58A00D8A22A /* Assets.xcassets in Resources */,
+				26C5EA0D2942D14200BA71AC /* AppleWatch.usdz in Resources */,
 				26074AFE292DC58800D8A22A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,11 +213,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26800326293DF1E8001D831D /* ARBodyController.mm in Sources */,
 				26074AFB292DC58800D8A22A /* ViewController.m in Sources */,
-				26074B0F292DC6F500D8A22A /* ARPlaneController.m in Sources */,
+				26074B0F292DC6F500D8A22A /* ARPlaneController.mm in Sources */,
+				26800322293D99E4001D831D /* AEAR.mm in Sources */,
+				26C5EA082941E9DA00BA71AC /* DeWuViewController.m in Sources */,
 				2670B53C2938998F007151C4 /* shaders.metal in Sources */,
 				26074AF5292DC58800D8A22A /* AppDelegate.m in Sources */,
-				26074B12292DFAF300D8A22A /* ARPlane.m in Sources */,
 				2670B53A29388A52007151C4 /* ARMetalController.m in Sources */,
 				26074B06292DC58A00D8A22A /* main.m in Sources */,
 			);

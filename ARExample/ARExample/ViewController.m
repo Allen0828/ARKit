@@ -10,7 +10,8 @@
 
 #import "ARPlaneController.h"
 #import "ARMetalController.h"
-
+#import "ARBodyController.h"
+#import "DeWuViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -24,7 +25,7 @@
 {
     if (_data == nil)
     {
-        _data = @[@"平面监测", @"使用metal渲染"];
+        _data = @[@"平面监测", @"使用metal渲染", @"骨骼监测", @"仿得物试衣间"];
     }
     return _data;
 }
@@ -82,6 +83,34 @@
                 return;
             }
             [self.navigationController pushViewController:[ARMetalController new] animated:true];
+            break;
+        }
+        case 2:
+        {
+            if (@available(iOS 13.0, *)) {
+                if (!ARBodyTrackingConfiguration.isSupported)
+                {
+                    NSLog(@"⚠️This device does not support ARBodyTrackingConfiguration");
+                    return;
+                }
+                [self.navigationController pushViewController:[ARBodyController new] animated:true];
+            } else {
+                NSLog(@"⚠️This device does not support ARBodyTrackingConfiguration");
+            }
+            break;
+        }
+        case 3:
+        {
+            if (@available(iOS 13.0, *)) {
+                if (!ARBodyTrackingConfiguration.isSupported)
+                {
+                    NSLog(@"⚠️This device does not support ARBodyTrackingConfiguration");
+                    return;
+                }
+                [self.navigationController pushViewController:[DeWuViewController new] animated:true];
+            } else {
+                NSLog(@"⚠️This device does not support ARBodyTrackingConfiguration");
+            }
             break;
         }
         default:

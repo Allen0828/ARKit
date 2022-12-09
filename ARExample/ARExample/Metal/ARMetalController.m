@@ -6,8 +6,7 @@
 //
 
 #import "ARMetalController.h"
-#import <ARKit/ARKit.h>
-#import <Accelerate/Accelerate.h>
+#import "AEAR.h"
 
 #import <Metal/Metal.h>
 #import <MetalKit/MetalKit.h>
@@ -29,12 +28,11 @@ typedef struct {
 
 
 
-@interface ARMetalController () <ARSessionDelegate, MTKViewDelegate>
+@interface ARMetalController () <MTKViewDelegate>
 {
-    ARFrame *_currentFrame;
     BOOL _isUpdate;
 }
-@property (nonatomic,strong) ARSession *session;
+
 @property (nonatomic,assign) CVMetalTextureCacheRef textureCache;
 
 @property (nonatomic,strong) MTKView *mtkView;
@@ -55,10 +53,7 @@ typedef struct {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     _isUpdate = true;
-    
-    self.session = [ARSession new];
-    self.session.delegate = self;
-    
+
     self.mtkView = [[MTKView alloc] initWithFrame:self.view.bounds];
     self.mtkView.device = MTLCreateSystemDefaultDevice();
     [self.mtkView setClearColor:MTLClearColorMake(0, 0, 0, 1)];
@@ -66,8 +61,10 @@ typedef struct {
     self.viewportSize = (vector_uint2){self.mtkView.drawableSize.width, self.mtkView.drawableSize.height};
     CVMetalTextureCacheCreate(NULL, NULL, self.mtkView.device, NULL, &_textureCache);
     
-    [self customInit];
+    [self setupPipeline];
+    [self setupVertex];
     [self.view addSubview:self.mtkView];
+    
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
@@ -79,23 +76,19 @@ typedef struct {
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    ARWorldTrackingConfiguration *config = [ARWorldTrackingConfiguration new];
-    config.planeDetection = ARPlaneDetectionHorizontal;
-    [self.session runWithConfiguration:config];
+    if (IsARSupportTracking(AR_TRACKING_WORLD_VERTICAL))
+    {
+        NSLog(@"IsARSupportTracking");
+        ARInit(AR_TRACKING_WORLD_VERTICAL);
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.session pause];
+    UnloadAR();
 }
 
-
-- (void)customInit {
-    [self setupPipeline];
-    [self setupVertex];
-//    [self setupMatrix];
-}
 
 - (id<MTLBuffer>)getColorMatrix
 {
@@ -186,7 +179,9 @@ typedef struct {
     id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
     MTLRenderPassDescriptor *renderPassDescriptor = view.currentRenderPassDescriptor;
 
-    CVPixelBufferRef sampleBuffer = _currentFrame.capturedImage;
+    CVPixelBufferRef sampleBuffer = UpdateCamera(); //_currentFrame.capturedImage;
+    
+    
     if(renderPassDescriptor && sampleBuffer)
     {
         [self setupVertex];
@@ -213,11 +208,6 @@ typedef struct {
         [commandBuffer presentDrawable:view.currentDrawable];
     }
     [commandBuffer commit];
-}
-
-- (void)session:(ARSession *)session didUpdateFrame:(ARFrame *)frame
-{
-    _currentFrame = frame;
 }
 
 - (void)setupTextureWithEncoder:(id<MTLRenderCommandEncoder>)encoder buffer:(CVPixelBufferRef)sampleBuffer {
@@ -259,5 +249,9 @@ typedef struct {
     }
 }
 
+- (void)dealloc
+{
+    NSLog(@"vc dealloc");
+}
 
 @end
