@@ -18,7 +18,7 @@
 		2670B53C2938998F007151C4 /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2670B53B2938998F007151C4 /* shaders.metal */; };
 		26800322293D99E4001D831D /* AEAR.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26800321293D99E4001D831D /* AEAR.mm */; };
 		26800326293DF1E8001D831D /* ARBodyController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26800325293DF1E8001D831D /* ARBodyController.mm */; };
-		26C5EA082941E9DA00BA71AC /* DeWuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C5EA072941E9DA00BA71AC /* DeWuViewController.m */; };
+		26C5EA082941E9DA00BA71AC /* DeWuViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26C5EA072941E9DA00BA71AC /* DeWuViewController.mm */; };
 		26C5EA0D2942D14200BA71AC /* AppleWatch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,7 @@
 		26800324293DF1E8001D831D /* ARBodyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARBodyController.h; sourceTree = "<group>"; };
 		26800325293DF1E8001D831D /* ARBodyController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ARBodyController.mm; sourceTree = "<group>"; };
 		26C5EA062941E9DA00BA71AC /* DeWuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeWuViewController.h; sourceTree = "<group>"; };
-		26C5EA072941E9DA00BA71AC /* DeWuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeWuViewController.m; sourceTree = "<group>"; };
+		26C5EA072941E9DA00BA71AC /* DeWuViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DeWuViewController.mm; sourceTree = "<group>"; };
 		26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AppleWatch.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				26C5EA062941E9DA00BA71AC /* DeWuViewController.h */,
-				26C5EA072941E9DA00BA71AC /* DeWuViewController.m */,
+				26C5EA072941E9DA00BA71AC /* DeWuViewController.mm */,
 			);
 			path = DeWu;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				26074AFB292DC58800D8A22A /* ViewController.m in Sources */,
 				26074B0F292DC6F500D8A22A /* ARPlaneController.mm in Sources */,
 				26800322293D99E4001D831D /* AEAR.mm in Sources */,
-				26C5EA082941E9DA00BA71AC /* DeWuViewController.m in Sources */,
+				26C5EA082941E9DA00BA71AC /* DeWuViewController.mm in Sources */,
 				2670B53C2938998F007151C4 /* shaders.metal in Sources */,
 				26074AF5292DC58800D8A22A /* AppDelegate.m in Sources */,
 				2670B53A29388A52007151C4 /* ARMetalController.m in Sources */,

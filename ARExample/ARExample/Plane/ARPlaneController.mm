@@ -65,8 +65,13 @@ SCNVector3 ExtractTranslationT(const simd_float4x4& t)
         if ([anchor isKindOfClass:[ARPlaneAnchor class]])
         {
             ARPlaneAnchor *pAnchor = (ARPlaneAnchor*)anchor;
-
-            SCNPlane *geometry = [SCNPlane planeWithWidth:pAnchor.extent.x height:pAnchor.extent.z];
+            
+            SCNPlane *geometry;
+            if (@available(iOS 16.0, *)) {
+                geometry = [SCNPlane planeWithWidth:pAnchor.planeExtent.width height:pAnchor.planeExtent.height];
+            } else {
+                geometry = [SCNPlane planeWithWidth:pAnchor.extent.x height:pAnchor.extent.z];
+            }
             SCNMaterial *material = geometry.materials.firstObject;
             UIImage *img = [UIImage imageNamed:@"bricks"];
             material.diffuse.contents = img;
@@ -94,8 +99,13 @@ SCNVector3 ExtractTranslationT(const simd_float4x4& t)
                 {
                     return;
                 }
-                plane.width = pAnchor.extent.x;
-                plane.height = pAnchor.extent.z;
+                if (@available(iOS 16.0, *)) {
+                    plane.width = pAnchor.planeExtent.width;
+                    plane.height = pAnchor.planeExtent.height;
+                } else {
+                    plane.width = pAnchor.extent.x;
+                    plane.height = pAnchor.extent.z;
+                }
             });
         }
     }

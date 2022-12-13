@@ -103,13 +103,11 @@ void ExtractRotation(const simd_float4x4& t)
         for (ARAnchor *anchor in anchors)
         {
             ARBodyAnchor *bodyAnchor = (ARBodyAnchor*)anchor;
-            NSArray *arr = bodyAnchor.skeleton.definition.jointNames;
-            simd_float4x4 joint = [bodyAnchor.skeleton modelTransformForJointName:@"left_handRing_2_joint"];
-            
             self.rootBox.position = ExtractTranslation(bodyAnchor.transform);
             self.headBox.position = ExtractTranslation(matrix_multiply(bodyAnchor.transform, [bodyAnchor.skeleton modelTransformForJointName:@"left_handRing_2_joint"]));
 //            self.leftHandBox.position = ExtractTranslation(matrix_multiply(bodyAnchor.transform, [bodyAnchor.skeleton modelTransformForJointName:ARSkeletonJointNameLeftHand]));
-//            self.rightHandBox.position = ExtractTranslation(matrix_multiply(bodyAnchor.transform, [bodyAnchor.skeleton modelTransformForJointName:ARSkeletonJointNameRightHand]));
+            // ARSkeletonJointNameRightHand = right_hand_joint
+            self.rightHandBox.position = ExtractTranslation(matrix_multiply(bodyAnchor.transform, [bodyAnchor.skeleton modelTransformForJointName:@"right_hand_joint"]));
 //            self.leftFootBox.position = ExtractTranslation(matrix_multiply(bodyAnchor.transform, [bodyAnchor.skeleton modelTransformForJointName:ARSkeletonJointNameLeftFoot]));
 //            self.rightFootBox.position = ExtractTranslation(matrix_multiply(bodyAnchor.transform, [bodyAnchor.skeleton modelTransformForJointName:ARSkeletonJointNameRightFoot]));
 //            self.leftShoulderBox.position = ExtractTranslation(matrix_multiply(bodyAnchor.transform, [bodyAnchor.skeleton modelTransformForJointName:ARSkeletonJointNameLeftShoulder]));
