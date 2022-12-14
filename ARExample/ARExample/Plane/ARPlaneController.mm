@@ -14,7 +14,7 @@ SCNVector3 ExtractTranslationT(const simd_float4x4& t)
     return SCNVector3Make(t.columns[3][0], t.columns[3][1], t.columns[3][2]);
 }
 
-@interface ARPlaneController () <ARSCNViewDelegate, ARSessionDelegate>
+@interface ARPlaneController () <ARSessionDelegate>
 
 @property (nonatomic,strong) ARSCNView *sceneView;
 
@@ -29,12 +29,10 @@ SCNVector3 ExtractTranslationT(const simd_float4x4& t)
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.blackColor;
     self.sceneView = [[ARSCNView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.sceneView.delegate = self;
     self.sceneView.session.delegate = self;
     self.sceneView.scene = [SCNScene new];
     self.sceneView.debugOptions = ARSCNDebugOptionShowFeaturePoints;
     [self.view addSubview:self.sceneView];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -77,12 +75,17 @@ SCNVector3 ExtractTranslationT(const simd_float4x4& t)
             material.diffuse.contents = img;
             SCNNode *planeNode = [SCNNode nodeWithGeometry:geometry];
             planeNode.name = pAnchor.identifier.UUIDString;
-//            planeNode.position = SCNVector3Make(pAnchor.center.x, pAnchor.center.y, pAnchor.center.z);
             SCNVector3 pos = ExtractTranslationT(pAnchor.transform);
-            NSLog(@"pos.y=%f", pos.y);
             planeNode.transform = SCNMatrix4MakeRotation(-M_PI / 2.0, 1, 0, 0);
             planeNode.worldPosition = pos;
             [self.sceneView.scene.rootNode addChildNode:planeNode];
+            
+            SCNBox *box = [SCNBox boxWithWidth:0.2 height:0.2 length:0.2 chamferRadius:0];
+            SCNNode *boxNode = [SCNNode nodeWithGeometry:box];
+            boxNode.worldPosition = SCNVector3Make(pos.x, pos.y+0.15, pos.z);
+            boxNode.scale = SCNVector3Make(0.5, 0.5, 0.5);
+            
+            [self.sceneView.scene.rootNode addChildNode:boxNode];
         }
     }
 }
@@ -93,20 +96,18 @@ SCNVector3 ExtractTranslationT(const simd_float4x4& t)
         if ([anchor isKindOfClass:[ARPlaneAnchor class]])
         {
             ARPlaneAnchor *pAnchor = (ARPlaneAnchor*)anchor;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                SCNPlane *plane = [self findPlaneWith:pAnchor.identifier.UUIDString];
-                if (!plane)
-                {
-                    return;
-                }
-                if (@available(iOS 16.0, *)) {
-                    plane.width = pAnchor.planeExtent.width;
-                    plane.height = pAnchor.planeExtent.height;
-                } else {
-                    plane.width = pAnchor.extent.x;
-                    plane.height = pAnchor.extent.z;
-                }
-            });
+            SCNPlane *plane = [self findPlaneWith:pAnchor.identifier.UUIDString];
+            if (!plane)
+            {
+                return;
+            }
+            if (@available(iOS 16.0, *)) {
+                plane.width = pAnchor.planeExtent.width;
+                plane.height = pAnchor.planeExtent.height;
+            } else {
+                plane.width = pAnchor.extent.x;
+                plane.height = pAnchor.extent.z;
+            }
         }
     }
 }
