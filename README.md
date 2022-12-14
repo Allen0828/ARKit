@@ -2,22 +2,15 @@
 
 博客地址: https://blog.csdn.net/weixin_40085372/article/details/116007550
 
-- [x] 1.AR相机输出 YUV转RGB   完成
-- [x] 2.平面监测 完成
-- [ ] 3.特征点监测 待开发
-- [ ] 4.光照对比 待开发
-- [x] 5.射线监测 完成
-- [x] 6.图像监测和跟踪  完成
-- [ ] 7.3D物体监测和跟踪 待开发
-- [ ] 8.环境光探头 待开发
-- [ ] 9.世界地图
-- [x] 10.人脸跟踪(识别 姿态 网格和形状混合) 完成
-- [ ] 11.云锚点
-- [x] 12.人体动作捕捉 (眨眼监测)
-- [x] 13.人形遮挡 完成
-- [ ] 14.多人脸监测
-- [ ] 15.多人协作
-- [ ] 16.多图像识别
+<view>
+
+<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/001.png" width="200"></img>
+<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/002.png" width="200"></img> 
+<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/003.png" width="200"></img>
+<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/004.png" width="200"></img>
+<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/005.png" width="200"></img>
+
+</view>
 
 
 If you use arkit and try to get the camera frame, you will find that its type is `kcvpixelformattype_ 420YpCbCr8BiPlanarFullRange`
@@ -207,6 +200,4 @@ import ARKit
 
 Complete code, please download the zip to view
 
-
-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
 
