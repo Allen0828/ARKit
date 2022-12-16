@@ -12,6 +12,7 @@
 #import "ARMetalController.h"
 #import "ARBodyController.h"
 #import "DeWuViewController.h"
+#import "ARImageController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -25,7 +26,7 @@
 {
     if (_data == nil)
     {
-        _data = @[@"平面监测", @"使用metal渲染", @"骨骼监测", @"仿得物试衣间"];
+        _data = @[@"平面监测", @"使用metal渲染", @"骨骼监测", @"仿得物试衣间", @"图片检测"];
     }
     return _data;
 }
@@ -111,6 +112,11 @@
             } else {
                 NSLog(@"⚠️This device does not support ARBodyTrackingConfiguration");
             }
+            break;
+        }
+        case 4:
+        {
+            [self.navigationController pushViewController:[ARImageController new] animated:true];
             break;
         }
         default:

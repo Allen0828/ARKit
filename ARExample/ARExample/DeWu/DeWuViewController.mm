@@ -10,17 +10,6 @@
 
 static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
 {
-//    vector_float3 v = vector_normalize(((vector_float3){x, y, z}));
-//    float cos = cosf(radians);
-//    float cosp = 1.0f - cos;
-//    float sin = sinf(radians);
-//    SCNMatrix4 m = {
-//        .columns[0] = { cos + cosp * v.x * v.x, cosp * v.x * v.y + v.z * sin, cosp * v.x * v.z - v.y * sin, 0.0f, },
-//        .columns[1] = { cosp * v.x * v.y - v.z * sin, cos + cosp * v.y * v.y, cosp * v.y * v.z + v.x * sin, 0.0f, },
-//        .columns[2] = { cosp * v.x * v.z + v.y * sin, cosp * v.y * v.z - v.x * sin, cos + cosp * v.z * v.z, 0.0f, },
-//        .columns[3] = { 0.0f, 0.0f, 0.0f, 1.0f }
-//    };
-//    return m;
     return SCNMatrix4MakeRotation(radians, x, y, z);
 }
 
@@ -55,7 +44,7 @@ static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
     btn.backgroundColor = UIColor.redColor;
     [btn setTitle:@"模型加载中..." forState:UIControlStateNormal];
     [self.view addSubview:btn];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [btn setTitle:@"点击试穿" forState:UIControlStateNormal];
     });
 }
@@ -69,6 +58,7 @@ static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
     SCNNode *boxNode = [SCNNode nodeWithGeometry:box];
     boxNode.transform = SCNMatrix4MakeRotation(M_PI/2, 1, 1, 1);
     
+//    self.scene.scene.rootNode.worldPosition = SCNVector3Make(0, 0, -5);
     [self.scene.scene.rootNode addChildNode:boxNode];
 }
 - (void)addAppleWatch

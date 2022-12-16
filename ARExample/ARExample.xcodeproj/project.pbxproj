@@ -20,6 +20,9 @@
 		26800326293DF1E8001D831D /* ARBodyController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26800325293DF1E8001D831D /* ARBodyController.mm */; };
 		26C5EA082941E9DA00BA71AC /* DeWuViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26C5EA072941E9DA00BA71AC /* DeWuViewController.mm */; };
 		26C5EA0D2942D14200BA71AC /* AppleWatch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */; };
+		26EA6411294C4122003049D4 /* ARImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EA6410294C4122003049D4 /* ARImageController.m */; };
+		26EA641E294C5249003049D4 /* test_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EA641D294C5249003049D4 /* test_image.png */; };
+		26EA6420294C6180003049D4 /* ar_images in Resources */ = {isa = PBXBuildFile; fileRef = 26EA641F294C6180003049D4 /* ar_images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,10 @@
 		26C5EA062941E9DA00BA71AC /* DeWuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeWuViewController.h; sourceTree = "<group>"; };
 		26C5EA072941E9DA00BA71AC /* DeWuViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DeWuViewController.mm; sourceTree = "<group>"; };
 		26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AppleWatch.usdz; sourceTree = "<group>"; };
+		26EA640F294C4122003049D4 /* ARImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARImageController.h; sourceTree = "<group>"; };
+		26EA6410294C4122003049D4 /* ARImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARImageController.m; sourceTree = "<group>"; };
+		26EA641D294C5249003049D4 /* test_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image.png; sourceTree = "<group>"; };
+		26EA641F294C6180003049D4 /* ar_images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ar_images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +84,7 @@
 		26074AF2292DC58800D8A22A /* ARExample */ = {
 			isa = PBXGroup;
 			children = (
+				26EA640E294C40FD003049D4 /* Image */,
 				26C5EA092941F30900BA71AC /* Assets */,
 				26C5EA052941E9B700BA71AC /* DeWu */,
 				26800323293DF1D0001D831D /* Body */,
@@ -142,6 +150,17 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		26EA640E294C40FD003049D4 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				26EA641F294C6180003049D4 /* ar_images */,
+				26EA641D294C5249003049D4 /* test_image.png */,
+				26EA640F294C4122003049D4 /* ARImageController.h */,
+				26EA6410294C4122003049D4 /* ARImageController.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,7 +219,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				26074B03292DC58A00D8A22A /* LaunchScreen.storyboard in Resources */,
+				26EA6420294C6180003049D4 /* ar_images in Resources */,
 				26074B00292DC58A00D8A22A /* Assets.xcassets in Resources */,
+				26EA641E294C5249003049D4 /* test_image.png in Resources */,
 				26C5EA0D2942D14200BA71AC /* AppleWatch.usdz in Resources */,
 				26074AFE292DC58800D8A22A /* Main.storyboard in Resources */,
 			);
@@ -219,6 +240,7 @@
 				26800322293D99E4001D831D /* AEAR.mm in Sources */,
 				26C5EA082941E9DA00BA71AC /* DeWuViewController.mm in Sources */,
 				2670B53C2938998F007151C4 /* shaders.metal in Sources */,
+				26EA6411294C4122003049D4 /* ARImageController.m in Sources */,
 				26074AF5292DC58800D8A22A /* AppDelegate.m in Sources */,
 				2670B53A29388A52007151C4 /* ARMetalController.m in Sources */,
 				26074B06292DC58A00D8A22A /* main.m in Sources */,
