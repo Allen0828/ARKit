@@ -23,6 +23,8 @@
 		26EA6411294C4122003049D4 /* ARImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EA6410294C4122003049D4 /* ARImageController.m */; };
 		26EA641E294C5249003049D4 /* test_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EA641D294C5249003049D4 /* test_image.png */; };
 		26EA6420294C6180003049D4 /* ar_images in Resources */ = {isa = PBXBuildFile; fileRef = 26EA641F294C6180003049D4 /* ar_images */; };
+		26EA64232950351A003049D4 /* WearController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26EA64222950351A003049D4 /* WearController.mm */; };
+		26EA642629505013003049D4 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EA642529505013003049D4 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,9 @@
 		26EA6410294C4122003049D4 /* ARImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARImageController.m; sourceTree = "<group>"; };
 		26EA641D294C5249003049D4 /* test_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image.png; sourceTree = "<group>"; };
 		26EA641F294C6180003049D4 /* ar_images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ar_images; sourceTree = "<group>"; };
+		26EA64212950351A003049D4 /* WearController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WearController.h; sourceTree = "<group>"; };
+		26EA64222950351A003049D4 /* WearController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WearController.mm; sourceTree = "<group>"; };
+		26EA642529505013003049D4 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26EA642629505013003049D4 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +76,7 @@
 			children = (
 				26074AF2292DC58800D8A22A /* ARExample */,
 				26074AF1292DC58800D8A22A /* Products */,
+				26EA642429505012003049D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +145,8 @@
 			children = (
 				26C5EA062941E9DA00BA71AC /* DeWuViewController.h */,
 				26C5EA072941E9DA00BA71AC /* DeWuViewController.mm */,
+				26EA64212950351A003049D4 /* WearController.h */,
+				26EA64222950351A003049D4 /* WearController.mm */,
 			);
 			path = DeWu;
 			sourceTree = "<group>";
@@ -159,6 +168,14 @@
 				26EA6410294C4122003049D4 /* ARImageController.m */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		26EA642429505012003049D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26EA642529505013003049D4 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26EA64232950351A003049D4 /* WearController.mm in Sources */,
 				26800326293DF1E8001D831D /* ARBodyController.mm in Sources */,
 				26074AFB292DC58800D8A22A /* ViewController.m in Sources */,
 				26074B0F292DC6F500D8A22A /* ARPlaneController.mm in Sources */,

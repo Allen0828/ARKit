@@ -7,6 +7,7 @@
 
 #import "DeWuViewController.h"
 #import <ARKit/ARKit.h>
+#import "WearController.h"
 
 static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
 {
@@ -47,6 +48,7 @@ static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [btn setTitle:@"点击试穿" forState:UIControlStateNormal];
     });
+    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)addBoxGeometry
@@ -75,7 +77,11 @@ static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
     });
 }
 
-
+- (void)btnClick
+{
+    WearController *vc = [WearController new];
+    [self.navigationController pushViewController:vc animated:true];
+}
 
 @end
-//matrix_from_rotation(M_PI/2, 1, 1, 1);
+

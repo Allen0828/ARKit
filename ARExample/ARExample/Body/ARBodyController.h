@@ -6,11 +6,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ARKit/ARKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+
+SCNVector3 ExtractTranslation(const simd_float4x4 t);
+simd_float3x3 ExtractRotation(const simd_float4x4 t);
 
 @interface ARBodyController : UIViewController
 
 @end
 
-NS_ASSUME_NONNULL_END
+
