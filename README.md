@@ -6,9 +6,12 @@ ARKit example
 
 # 使用 Metal 渲染背景
 <view>
+    
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/metal_orientation.jpeg" width="300"></img>
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/metal.jpeg" width="200"></img> 
+
 </view>
+
 
 ## 屏幕发生旋转时 对纹理进行裁剪代码
 ```swift
@@ -57,8 +60,10 @@ ARKit example
 
 # ARPlane
 <view>
+    
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/plane001.jpeg" width="300"></img>
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/plane002.jpeg" width="300"></img> 
+
 </view>
 
 ## 找到平面时的加载代码
@@ -100,19 +105,23 @@ ARKit example
 
 # ARBody
 <view>
+    
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/body01.png" width="200"></img>
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/body02.png" width="200"></img> 
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/body03.png" width="200"></img> 
+
 </view>
 
 # 仿得物穿戴
 
 <view>
+    
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/001.png" width="200"></img>
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/002.png" width="200"></img> 
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/003.png" width="200"></img>
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/004.png" width="200"></img>
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/005.png" width="200"></img>
+
 </view>
 
 
