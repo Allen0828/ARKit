@@ -13,7 +13,6 @@
 
 @property (nonatomic,strong) ARSCNView *sceneView;
 @property (nonatomic,strong) SCNNode *watchRoot;
-@property (nonatomic,strong) SCNNode *testNode;
 
 @end
 
@@ -27,10 +26,6 @@
     self.sceneView.scene = [SCNScene new];
     self.sceneView.debugOptions = ARSCNDebugOptionShowFeaturePoints;
     [self.view addSubview:self.sceneView];
-    
-    self.testNode = [SCNNode nodeWithGeometry:[SCNBox new]];
-    self.testNode.scale = SCNVector3Make(0.2, 0.2, 0.2);
-//    [self.sceneView.scene.rootNode addChildNode:self.testNode];
     
     
     SCNScene *scene = [SCNScene sceneNamed:@"AppleWatch.usdz"];
@@ -84,9 +79,6 @@
         {
             ARBodyAnchor *bodyAnchor = (ARBodyAnchor*)anchor;
             simd_float4x4 hand = matrix_multiply(bodyAnchor.transform, [bodyAnchor.skeleton modelTransformForJointName:@"right_hand_joint"]);
-            
-            self.testNode.position = ExtractTranslation(matrix_multiply(bodyAnchor.transform, [bodyAnchor.skeleton modelTransformForJointName:@"right_hand_joint"])); //SCNVector3Make(hand.columns[3][0], hand.columns[3][1], hand.columns[3][2]);
-            
             
             //        SCNNode *node = [self findNodeWith: bodyAnchor.identifier.UUIDString];
             //        node.transform = SCNMatrix4FromMat4([bodyAnchor.skeleton modelTransformForJointName:@"right_hand_joint"]);
@@ -143,3 +135,32 @@
 }
 
 @end
+
+/*
+ right_hand_joint,
+ right_handIndexStart_joint,
+ right_handIndex_1_joint,
+ right_handIndex_2_joint,
+ right_handIndex_3_joint,
+ right_handIndexEnd_joint,
+ right_handMidStart_joint,
+ right_handMid_1_joint,
+ right_handMid_2_joint,
+ right_handMid_3_joint,
+ right_handMidEnd_joint,
+ right_handPinkyStart_joint,
+ right_handPinky_1_joint,
+ right_handPinky_2_joint,
+ right_handPinky_3_joint,
+ right_handPinkyEnd_joint,
+ right_handRingStart_joint,
+ right_handRing_1_joint,
+ right_handRing_2_joint,
+ right_handRing_3_joint,
+ right_handRingEnd_joint,
+ right_handThumbStart_joint,
+ right_handThumb_1_joint,
+ right_handThumb_2_joint,
+ right_handThumbEnd_joint
+ 
+ */
