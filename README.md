@@ -112,16 +112,13 @@ ARKit example
 
 </view>
 
-# 仿得物穿戴
+# AR穿戴
 
 <view>
     
-<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/001.png" width="200"></img>
-<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/002.png" width="200"></img> 
-<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/003.png" width="200"></img>
-<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/004.png" width="200"></img>
 <img src="https://github.com/Allen0828/ARKit/blob/main/imgs/005.png" width="200"></img>
-
+<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/w001.png" width="200"></img>
+<img src="https://github.com/Allen0828/ARKit/blob/main/imgs/w002.png" width="230"></img>
 </view>
 
 
