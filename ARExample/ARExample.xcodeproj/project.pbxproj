@@ -18,6 +18,13 @@
 		2670B53C2938998F007151C4 /* shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2670B53B2938998F007151C4 /* shaders.metal */; };
 		26800322293D99E4001D831D /* AEAR.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26800321293D99E4001D831D /* AEAR.mm */; };
 		26800326293DF1E8001D831D /* ARBodyController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26800325293DF1E8001D831D /* ARBodyController.mm */; };
+		268F6C4E295D88B800E6C2A9 /* assets001_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 268F6C4D295D88B800E6C2A9 /* assets001_img.jpg */; };
+		268F6C50295D8BB800E6C2A9 /* 56356556.obj in Resources */ = {isa = PBXBuildFile; fileRef = 268F6C4F295D8BB800E6C2A9 /* 56356556.obj */; };
+		268F6C52295D8BF300E6C2A9 /* 56356556.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 268F6C51295D8BF300E6C2A9 /* 56356556.mtl */; };
+		268F6C55295D90CC00E6C2A9 /* mainlv.unity_23.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 268F6C53295D90CC00E6C2A9 /* mainlv.unity_23.mtl */; };
+		268F6C56295D90CC00E6C2A9 /* mainlv.unity_23.obj in Resources */ = {isa = PBXBuildFile; fileRef = 268F6C54295D90CC00E6C2A9 /* mainlv.unity_23.obj */; };
+		268F6C59295D910000E6C2A9 /* road.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 268F6C57295D910000E6C2A9 /* road.jpg */; };
+		268F6C5C295D91AF00E6C2A9 /* Map1_Viahe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 268F6C5B295D91AF00E6C2A9 /* Map1_Viahe.jpg */; };
 		26C5EA082941E9DA00BA71AC /* DeWuViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26C5EA072941E9DA00BA71AC /* DeWuViewController.mm */; };
 		26C5EA0D2942D14200BA71AC /* AppleWatch.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */; };
 		26EA6411294C4122003049D4 /* ARImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EA6410294C4122003049D4 /* ARImageController.m */; };
@@ -47,6 +54,13 @@
 		26800321293D99E4001D831D /* AEAR.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AEAR.mm; sourceTree = "<group>"; };
 		26800324293DF1E8001D831D /* ARBodyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARBodyController.h; sourceTree = "<group>"; };
 		26800325293DF1E8001D831D /* ARBodyController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ARBodyController.mm; sourceTree = "<group>"; };
+		268F6C4D295D88B800E6C2A9 /* assets001_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = assets001_img.jpg; sourceTree = "<group>"; };
+		268F6C4F295D8BB800E6C2A9 /* 56356556.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 56356556.obj; sourceTree = "<group>"; };
+		268F6C51295D8BF300E6C2A9 /* 56356556.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 56356556.mtl; sourceTree = "<group>"; };
+		268F6C53295D90CC00E6C2A9 /* mainlv.unity_23.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mainlv.unity_23.mtl; sourceTree = "<group>"; };
+		268F6C54295D90CC00E6C2A9 /* mainlv.unity_23.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mainlv.unity_23.obj; sourceTree = "<group>"; };
+		268F6C57295D910000E6C2A9 /* road.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = road.jpg; sourceTree = "<group>"; };
+		268F6C5B295D91AF00E6C2A9 /* Map1_Viahe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Map1_Viahe.jpg; sourceTree = "<group>"; };
 		26C5EA062941E9DA00BA71AC /* DeWuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeWuViewController.h; sourceTree = "<group>"; };
 		26C5EA072941E9DA00BA71AC /* DeWuViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DeWuViewController.mm; sourceTree = "<group>"; };
 		26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = AppleWatch.usdz; sourceTree = "<group>"; };
@@ -154,6 +168,13 @@
 		26C5EA092941F30900BA71AC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				268F6C5B295D91AF00E6C2A9 /* Map1_Viahe.jpg */,
+				268F6C57295D910000E6C2A9 /* road.jpg */,
+				268F6C53295D90CC00E6C2A9 /* mainlv.unity_23.mtl */,
+				268F6C54295D90CC00E6C2A9 /* mainlv.unity_23.obj */,
+				268F6C51295D8BF300E6C2A9 /* 56356556.mtl */,
+				268F6C4F295D8BB800E6C2A9 /* 56356556.obj */,
+				268F6C4D295D88B800E6C2A9 /* assets001_img.jpg */,
 				26C5EA0C2942D14200BA71AC /* AppleWatch.usdz */,
 			);
 			path = Assets;
@@ -235,11 +256,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268F6C4E295D88B800E6C2A9 /* assets001_img.jpg in Resources */,
+				268F6C59295D910000E6C2A9 /* road.jpg in Resources */,
 				26074B03292DC58A00D8A22A /* LaunchScreen.storyboard in Resources */,
+				268F6C56295D90CC00E6C2A9 /* mainlv.unity_23.obj in Resources */,
 				26EA6420294C6180003049D4 /* ar_images in Resources */,
 				26074B00292DC58A00D8A22A /* Assets.xcassets in Resources */,
+				268F6C5C295D91AF00E6C2A9 /* Map1_Viahe.jpg in Resources */,
 				26EA641E294C5249003049D4 /* test_image.png in Resources */,
+				268F6C52295D8BF300E6C2A9 /* 56356556.mtl in Resources */,
 				26C5EA0D2942D14200BA71AC /* AppleWatch.usdz in Resources */,
+				268F6C50295D8BB800E6C2A9 /* 56356556.obj in Resources */,
+				268F6C55295D90CC00E6C2A9 /* mainlv.unity_23.mtl in Resources */,
 				26074AFE292DC58800D8A22A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

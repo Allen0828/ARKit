@@ -17,7 +17,7 @@ static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
 
 @interface DeWuViewController ()
 
-@property (nonatomic,strong) SCNView *scene;
+@property (nonatomic,strong) SCNView *sceneView;
 
 @end
 
@@ -28,18 +28,33 @@ static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
     self.title = @"得物试衣间";
     self.view.backgroundColor = UIColor.whiteColor;
     
-    self.scene = [[SCNView alloc] initWithFrame:
+    self.sceneView = [[SCNView alloc] initWithFrame:
                   CGRectMake(0, 88, self.view.frame.size.width, 200)];
-    self.scene.backgroundColor = UIColor.lightGrayColor;
-    self.scene.allowsCameraControl = true;
-    SCNScene *rootScene = [SCNScene scene];
-    self.scene.scene = rootScene;
-    [self.view addSubview:self.scene];
+    self.sceneView.backgroundColor = UIColor.lightGrayColor;
+    self.sceneView.allowsCameraControl = true;
+    self.sceneView.scene = [SCNScene scene];
+    [self.view addSubview:self.sceneView];
      
+    SCNNode *cameranode = [SCNNode node];
+    cameranode.camera = [SCNCamera camera];
+    cameranode.camera.automaticallyAdjustsZRange = true;
+    cameranode.position = SCNVector3Make(0, 0, 10);
+    [self.sceneView.scene.rootNode addChildNode:cameranode];
 
     
     [self addBoxGeometry];
     [self addAppleWatch];
+    
+    SCNScene *boxSecene = [SCNScene sceneNamed:@"56356556.obj"];
+    
+    SCNNode *node = boxSecene.rootNode.childNodes[0];
+    node.geometry.firstMaterial.lightingModelName = SCNLightingModelBlinn;
+    UIImage *img = [UIImage imageWithContentsOfFile:[NSBundle.mainBundle pathForResource:@"assets001_img" ofType:@"jpg"]];
+    node.geometry.firstMaterial.diffuse.contents = img;
+    node.position = SCNVector3Make(-0.5, -0.8, -10);
+    node.scale = SCNVector3Make(0.1, 0.1, 0.1);
+    [self.sceneView.scene.rootNode addChildNode:node];
+    
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(80, 400, self.view.frame.size.width-160, 50)];
     btn.backgroundColor = UIColor.redColor;
@@ -61,7 +76,7 @@ static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
     boxNode.transform = SCNMatrix4MakeRotation(M_PI/2, 1, 1, 1);
     
 //    self.scene.scene.rootNode.worldPosition = SCNVector3Make(0, 0, -5);
-    [self.scene.scene.rootNode addChildNode:boxNode];
+    [self.sceneView.scene.rootNode addChildNode:boxNode];
 }
 - (void)addAppleWatch
 {
@@ -73,7 +88,7 @@ static SCNMatrix4 matrix_from_rotation(float radians, float x, float y, float z)
         watchRoot.position = SCNVector3Make(-0.5, -0.8, -0.5);
         watchRoot.scale = SCNVector3Make(0.2, 0.2, 0.2);
         [watchRoot addChildNode:watchNode];
-        [self.scene.scene.rootNode addChildNode:watchRoot];
+        [self.sceneView.scene.rootNode addChildNode:watchRoot];
     });
 }
 
